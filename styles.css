@@ -3,16 +3,16 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #3f3b51;
+  background-color: white;
 }
 
 .nav-menu {
@@ -21,6 +21,13 @@ body {
   font-size: 2rem;
   padding: 1rem 1.5rem;
   align-items: center;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
 }
 
 .link {
@@ -65,6 +72,10 @@ body {
     position: absolute;
     background: url(https://i.ibb.co/HrfVRcx/menu.png) no-repeat;
   }
+
+  .sign-in {
+    margin-left: 0px;
+  }
 }
 
 .hamburger.active {
@@ -84,7 +95,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 45rem;
+  margin-top: 10rem;
 }
 
 .media-icons {
@@ -120,16 +131,6 @@ footer {
   border: 3px solid black;
 }
 
-.fixed {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 300px;
-  border: 3px solid yellow;
-  border-radius: 30px;
-  list-style: none;
-}
-
 .relative {
   position: relative;
   width: 400px;
@@ -146,15 +147,6 @@ footer {
   border: 3px solid #73ad21;
 }
 
-.sticky {
-  position: sticky;
-  top: 0;
-  padding: 5px;
-  background-color: white;
-  border: 2px solid red;
-  z-index: 1;
-}
-
 .parent {
   position: relative;
   top: 50px;
@@ -169,21 +161,137 @@ footer {
 .parent {
   height: 200px;
   padding: 5px;
-  background-color: #00aaff;
 }
 
 .child {
   padding: 5px;
 }
 
-.child-one {
-  background-color: rgb(116, 255, 116);
+.sign-in {
+  font-size: 1rem;
+  background: black;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: white;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  margin-left: 800px;
 }
 
-.child-two {
-  background-color: rgb(248, 117, 117);
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
-.child-three {
-  background-color: rgb(255, 116, 232);
+input[type="submit"],
+input[type="reset"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+span {
+  color: green;
+  background-color: white;
+}
+
+p {
+  color: blue;
+  background-color: white;
+}
+
+.block {
+  margin-top: 30px;
+  height: 150px;
+  overflow: scroll;
+}
+
+.inline-block {
+  margin-top: 30px;
+  height: 30px;
+}
+
+.none {
+  display: none;
+}
+
+.descendants p {
+  background-color: yellow;
+  margin-top: 10px;
+}
+
+.child-selector > p {
+  background-color: red;
+}
+
+.adjacentSibling-selector + p {
+  background-color: green;
+}
+
+.generalSibling-selector ~ p {
+  background-color: grey;
+}
+
+.text {
+  position: absolute;
+  top: 150px;
+  left: 200px;
+}
+
+.text h2 {
+  font-size: 5rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.text p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .text h2 {
+    font-size: 3em;
+  }
+
+  .text h3 {
+    font-size: 2em;
+  }
+}
+.video-container {
+  position: relative;
+}
+
+picture {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-arrow {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  width: 50px;
 }
