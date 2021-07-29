@@ -8,7 +8,7 @@
     <!-- <link rel="stylesheet" href="grid-styles.css" /> -->
     <title>Document</title>
   </head>
-    <nav>
+    <nav class="sticky">
       <ul class="nav-menu">
         <li class="list"><a class="link grey" href="#">Home</a></li>
         <li class="list"><a class="link green" href="#">Category</a></li>
@@ -19,38 +19,41 @@
       </ul>
       <div class="hamburger"></div>
     </nav>
-    <div> <!--picture tag-->
-      <picture>
-        <source class="beach" media="(min-width:768px)" srcset="beach.png">
-        <source class="desert" media="(min-width:465px)" srcset="desert.png">
-        <img class="mountain" src="mountain.png" alt="mountain" style="width:75vw;">
-      </picture>
-    </div>
-    <div><!--video tag-->
-      <video class="video" muted loop autoplay controls>
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
+       
+<div class="video-container"><!--video tag-->
+  <video class="video" muted loop autoplay controls>
+   <source src="video.mp4" type="video/mp4">
+   Your browser does not support the video tag. -->
+ </video>
+<div class="text">
+  <h2>EXPLORE</h2>
+  <h3>YOUR DREAM DESTINATION</h3>
+  <p class="travel">Offering comprehensive travel solutions to individuals and groups</p>
+</div>
+</div>
     <div><!--positioning -->
    <div class="static"><!--static -->
-    <h3>this div has position static</h3>
+    <h3 class="wanderlust">WANDERLUST</h3>
+    <p class="appeal">“Travel is the main thing you purchase that makes you more extravagant”. We, at WANDERLUST, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly. We have been moving excellent encounters for a considerable length of time through our cutting edge planned occasion bundles and other fundamental travel administrations. We rouse our clients to carry on with a rich life, brimming with extraordinary travel encounters.Through our exceptionally curated occasion bundles, we need to take you on an adventure where you personally enjoy with the stunning magnificence of America and far off terrains. We need you to observe sensational scenes that are a long ways past your creative ability.
+
+      The powerful inclination of Indian voyagers to travel more nowadays is something that keeps us inspired to satisfy your vacation necessities. Our vision to give you a consistent occasion encounter makes us one of the main visit administrators in the regularly extending travel industry.</p>
   </div>
-  <div class="sticky">this is a sticky container</div><!--static -->
-   <div class="parent">
-   <h3>Parent</h3> 
-    <div class="child-one child">One</div>
-    <div class="child-two child">Two</div>
-    <div class="child-three child">Three</div>
+  <picture>
+    <source class="beach" media="(min-width:768px)" srcset="tropical.jpg">
+    <source class="river" media="(min-width:465px)" srcset="river.jpg">
+    <img class="view" src="view.jpg" alt="view" style="width:75vw;">
+  </picture>
+</div>
+   <div class="parent"> 
+     <div class="child-one child">
+     <img class="man" src="man.png" alt="man"> 
+     <p class="man-name">Chad Williams</p>`
   </div>
-    <ul class="fixed"><!--fixed -->
-    <li class="list"><a class="link grey" href="#">Home</a></li>
-    <li class="list"><a class="link green" href="#">Category</a></li>
-    <li class="list"><a class="link grey" href="#">About us</a></li>
-    <li class="list">
-      <a class="link green" href="#">Contact us</a>
-    </li>
-  </ul>
+    <div class="child-two child"><p class="review">"Hands down the most special and amazing trip I have done to date and coming from a well seasoned traveller, this is saying a lot".</p></div>
+  </div>
+  <div class="fixed-icon">
+    <a href="#"><img class="icon-arrow" src="arrow-icon.png" alt="arrow-icon"></a>
+ </div>
     </div>
     <footer >
       <div class="media-icons">
@@ -72,3 +75,5 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+
