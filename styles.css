@@ -8,11 +8,12 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #3f3b51;
+  background-color: white;
 }
 
 .nav-menu {
@@ -84,7 +85,8 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 45rem;
+  margin-top: 15rem;
+  margin-left: 10rem;
 }
 
 .media-icons {
@@ -102,10 +104,11 @@ footer {
 
 .faq-list {
   list-style: none;
+  color: black;
 }
 
 .white {
-  color: white;
+  color: black;
   padding-right: 1rem;
 }
 
@@ -117,7 +120,7 @@ footer {
 
 .static {
   position: static;
-  border: 3px solid black;
+  margin-top: 100px;
 }
 
 .fixed {
@@ -151,39 +154,135 @@ footer {
   top: 0;
   padding: 5px;
   background-color: white;
-  border: 2px solid red;
   z-index: 1;
 }
 
-.parent {
-  position: relative;
-  top: 50px;
-  z-index: -1;
-}
-
 .child-one {
-  position: absolute;
-  top: 100px;
+  left: 50%;
 }
 
 .parent {
   height: 200px;
   padding: 5px;
-  background-color: #00aaff;
+  position: relative;
+  z-index: -1;
 }
 
 .child {
   padding: 5px;
-}
-
-.child-one {
-  background-color: rgb(116, 255, 116);
+  position: absolute;
 }
 
 .child-two {
-  background-color: rgb(248, 117, 117);
+  color: tan;
+  top: 200px;
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 100%;
 }
 
-.child-three {
-  background-color: rgb(255, 116, 232);
+.review {
+}
+
+.icon-arrow {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  width: 50px;
+}
+
+picture {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.view {
+  border-radius: 50px;
+}
+
+.text {
+  position: absolute;
+  top: 200px;
+  left: 15%;
+  color: white;
+}
+
+.text h2 {
+  font-size: 8rem;
+  line-height: 7rem;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+
+.travel {
+  font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+  .text h2 {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+
+  .text h3 {
+    font-size: 2rem;
+  }
+  .travel {
+    font-size: 1.3rem;
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+.man {
+  width: 100px;
+  border-radius: 50px;
+  margin-top: 50px;
+  background-color: grey;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.man-name {
+  color: tan;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.wanderlust {
+  font-size: 3rem;
+  color: tan;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.appeal {
+  font-size: 2rem;
+  line-height: 4rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+@media (max-width: 768px) {
+  .appeal {
+    font-size: 1rem;
+    line-height: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+  }
 }
