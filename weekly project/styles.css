@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  align-items: center;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.list {
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    right: 15px;
+    top: 35px;
+    position: absolute;
+    background: url(https://i.ibb.co/HrfVRcx/menu.png) no-repeat;
+  }
+}
+
+.hamburger.active {
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+#result {
+  width: 100%;
+  padding-top: 50px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 2rem 10rem;
+}
+
+.title {
+  margin-top: 100px;
+  width: 30vw;
+  margin-right: auto;
+  margin-left: auto;
+  /* display: none; */
+}
+
+table {
+  border-color: seashell;
+}
+
+.button {
+  width: 100px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.box {
+  border: 1px solid #ccc;
+  height: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.box-1 {
+  border: 1px solid #ccc;
+  height: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+}
+
+.factorialInput {
+  padding-top: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.factorialButton {
+  margin-left: 50px;
+  padding: 20px;
+}
+
+.endingInput {
+  margin-left: 50px;
+}
+
+.showTables {
+  margin-left: 45%;
+  margin-top: 50px;
+}

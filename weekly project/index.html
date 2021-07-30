@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="sticky">
+      <ul class="nav-menu">
+        <li class="list"><a class="link" href="#">Calculator</a></li>
+        <li class="list"><a class="link" href="#">Home</a></li>
+        <li class="list"><a class="link" href="#">Tables</a></li>
+        <li class="list">
+          <a class="link green" href="#">Factorial</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="title">
+      <table width="100%" border="5">
+        <tr>
+          <td colspan="4"><input type="text" id="result" /></td>
+        </tr>
+        <tr>
+          <td><input class="button" type="button" value="1" /></td>
+          <td><input class="button" type="button" value="2" /></td>
+          <td><input class="button" type="button" value="3" /></td>
+          <td><input class="button" type="button" value="/" /></td>
+        </tr>
+        <tr>
+          <td><input class="button" type="button" value="4" /></td>
+          <td><input class="button" type="button" value="5" /></td>
+          <td><input class="button" type="button" value="6" /></td>
+          <td><input class="button" type="button" value="-" /></td>
+        </tr>
+        <tr>
+          <td><input class="button" type="button" value="7" /></td>
+          <td><input class="button" type="button" value="8" /></td>
+          <td><input class="button" type="button" value="9" /></td>
+          <td><input class="button" type="button" value="+" /></td>
+        </tr>
+        <tr>
+          <td><input class="button" type="button" value="." /></td>
+          <td><input class="button" type="button" value="0" /></td>
+          <td><input class="button" type="button" value="=" /></td>
+          <td><input class="button" type="button" value="*" /></td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <input
+              type="button"
+              class="button"
+              value="CLR"
+              style="width: 100%"
+            />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="box">
+      <h1 class="heading">Factorial series</h1>
+      <div class="input">
+        <input
+          type="text"
+          class="factorialInput"
+          name="factorial"
+          placeholder="inputFactorial"
+        />
+        <input class="factorialButton" type="button" value="Show factorial" />
+      </div>
+      <p>
+        <h2 class="output">The factorial of the number is</h2>
+        <h2 class="output-series"></h2>
+        <h2 class="output">=</h2>
+        <h2 class="output-value"></h2>
+      </p>
+    </div>
+    <div class="box-1">
+      <h1 class="heading">Multiplication table</h1>
+      <div class="input">
+        <input
+          type="text"
+          class="startingInput"
+          placeholder="Starting number"
+        />
+        <input
+          type="text"
+          class="endingInput"
+          placeholder="ending number"
+        />
+      </div>
+      <input class="showTables" type="button" value="Show tables" />
+      <p>
+        <h2 class="output"></h2>
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
