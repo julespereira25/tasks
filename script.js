@@ -5,19 +5,12 @@ const country = document.getElementById("country");
 const inline = document.querySelector(".inline");
 const block = document.querySelector(".block");
 const nav = document.querySelector(".nav-menu");
+const multiplication = document.querySelector(".second");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
-
-// function onLoad() {
-//   alert("Hey there guest!!!! Welcome to my webpage.");
-// }
-
-// function onResize() {
-//   alert("Hey!!!!You have changed the size of the page");
-// }
 
 function onBlur() {
   firstName.value = firstName.value.toUpperCase();
@@ -55,7 +48,7 @@ function onKeydown() {
 }
 
 function onKeyup() {
-  var x = document.getElementById("age");
+  var x = document.getElementById("dob");
   x.value = x.value.toUpperCase();
 }
 
@@ -90,4 +83,36 @@ function onWheel() {
 
 function onScroll() {
   block.style.fontSize = "15px";
+}
+
+function backgroundColor() {
+  var bgColor = document.getElementById("color").value;
+  var multiplication = document.querySelector(".second");
+  switch (bgColor) {
+    case "Red":
+      multiplication.style.backgroundColor = "red";
+      break;
+
+    case "Green":
+      multiplication.style.backgroundColor = "green";
+      break;
+
+    case "Yellow":
+      multiplication.style.backgroundColor = "yellow";
+      break;
+
+    case "Blue":
+      multiplication.style.backgroundColor = "blue";
+      break;
+  }
+}
+
+function numberInput() {
+  var numberInput = document.getElementById("numberInput").value;
+  var multipleInput = document.querySelector(".multiple-input");
+
+  for (let i = 1; i <= 10; i++) {
+    multipleInput.innerHTML +=
+      numberInput + "x" + i + "=" + numberInput * i + "<br>";
+  }
 }

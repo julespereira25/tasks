@@ -18,7 +18,7 @@ body {
 .nav-menu {
   list-style: none;
   display: flex;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 1rem 1.5rem;
   align-items: center;
 }
@@ -74,7 +74,7 @@ body {
   }
 
   .sign-in {
-    margin-left: 0px;
+    display: none;
   }
 }
 
@@ -175,12 +175,14 @@ footer {
   color: white;
   margin-top: 10px;
   letter-spacing: 2px;
-  margin-left: 800px;
+  /* margin-left: 800px; */
+  position: absolute;
+  right: 25px;
+  top: 0;
 }
 
 input[type="text"],
-select,
-textarea {
+select {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -204,7 +206,7 @@ input[type="reset"] {
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 2rem 10rem;
 }
 
 span {
@@ -294,4 +296,48 @@ picture {
   bottom: 150px;
   right: 20px;
   width: 50px;
+}
+
+.form-control {
+  color: red;
+}
+
+.first {
+  border: 1px solid green;
+  width: 500px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.multiplication {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+button {
+  margin-left: 2rem;
+}
+
+.multiple-input {
+  padding-left: 50px;
+  padding-bottom: 150px;
+  padding-top: 100px;
+  padding-right: 100px;
+  padding-right: 50px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-bottom: 16px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.second {
+  border: 1px solid green;
+  width: 700px;
+  margin-top: 50px;
 }

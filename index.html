@@ -9,23 +9,30 @@
     <title>Document</title>
   </head>
   <body onload="onLoad()" onresize="onResize()">
-     <nav class="sticky">
+    <nav class="sticky">
       <ul class="nav-menu">
         <li class="list"><a class="link grey" href="#">Home</a></li>
         <li class="list"><a class="link green" href="#">Category</a></li>
         <li class="list"><a class="link grey" href="#">About us</a></li>
         <li class="list">
-          <a class="link green" href="#">Contact us</a>
+          <a class="link green" href="contact-us.html">Contact us</a>
         </li>
         <div>
-        <a onclick="changeBackground()" ondblclick=" onDblclick()" class="sign-in" href="#">SIGN IN</a>
-      </div>
+          <a
+            onclick="changeBackground()"
+            ondblclick=" onDblclick()"
+            class="sign-in"
+            href="#"
+            >SIGN IN</a
+          >
+        </div>
       </ul>
       <div class="hamburger"></div>
     </nav>
-    <div class="video-container"><!--video tag-->
+    <div class="video-container">
+      <!--video tag-->
       <video class="video" muted loop autoplay controls>
-        <source src="video.mp4" type="video/mp4">
+        <source src="video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="text">
@@ -33,94 +40,194 @@
         <h3>YOUR DREAM DESTINATION</h3>
       </div>
     </div>
-    <div> <!--picture tag-->
-       <picture>
-        <source class="beach" media="(min-width:768px)" srcset="beach.png">
-        <source class="desert" media="(min-width:465px)" srcset="desert.png">
-        <img class="mountain" src="mountain.png" alt="mountain" style="width:75vw;">
+    <div>
+      <!--picture tag-->
+      <picture>
+        <source class="beach" media="(min-width:768px)" srcset="beach.png" />
+        <source class="desert" media="(min-width:465px)" srcset="desert.png" />
+        <img
+          class="mountain"
+          src="mountain.png"
+          alt="mountain"
+          style="width: 75vw"
+        />
       </picture>
     </div>
-    <div><!--positioning -->
-   <div class="static"><!--static -->
-     <h3>this div has position static</h3>
-  </div>
-    <div class="parent">
-   <h3>Parent</h3> 
-    <div class="child-one child">One</div>
-    <div class="child-two child">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
-    <div class="child-three child">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</div>
-  </div>
-    <div class="fixed-icon">
-     <a href="#"><img class="icon-arrow" src="arrow-icon.png" alt="arrow-icon"></a>
-  </div>
+    <div>
+      <!--positioning -->
+      <div class="static">
+        <!--static -->
+        <h3>this div has position static</h3>
+      </div>
+      <div class="parent">
+        <h3>Parent</h3>
+        <div class="child-one child">One</div>
+        <div class="child-two child">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </div>
+        <div class="child-three child">
+          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+          dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+          quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+          aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+          exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+          ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in
+          ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+          qui dolorem eum fugiat quo voluptas nulla pariatur?"
+        </div>
+      </div>
+      <div class="fixed-icon">
+        <a href="#"
+          ><img class="icon-arrow" src="arrow-icon.png" alt="arrow-icon"
+        /></a>
+      </div>
     </div>
     <div class="display">
-      <span onmousedown="mouseDown()" onmouseup="mouseUp()" class="inline">this is an inline element</span>
-      <p onscroll="onScroll()" onwheel="onWheel()" class="block">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
-      <p onmousemove="inlineOver(this)" onmouseout="inlineOut(this)" class="inline-block">this is an inline block element</p>
+      <span onmousedown="mouseDown()" onmouseup="mouseUp()" class="inline"
+        >this is an inline element</span
+      >
+      <p onscroll="onScroll()" onwheel="onWheel()" class="block">
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident,
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+        distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
+        cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+        omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+        quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+        ut et voluptates repudiandae sint et molestiae non recusandae. Itaque
+        earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus
+        asperiores repellat."
+      </p>
+      <p
+        onmousemove="inlineOver(this)"
+        onmouseout="inlineOut(this)"
+        class="inline-block"
+      >
+        this is an inline block element
+      </p>
       <p class="none">this will not be displayed</p>
-    </div>   
-     <div class="descendants">
-      <p>Paragraph </p>
-      <p>Paragraph </p>
-     </div>
-     <div class="child-selector">
+    </div>
+    <div class="descendants">
+      <p>Paragraph</p>
+      <p>Paragraph</p>
+    </div>
+    <div class="child-selector">
       <p>Paragraph 1 in the div.</p>
       <p>Paragraph 2 in the div.</p>
     </div>
-     <div class="adjacentSibling-selector">
+    <div class="adjacentSibling-selector">
       <p>Paragraph 1 in the div.</p>
       <p>Paragraph 2 in the div.</p>
-     </div>
-      <p>Paragraph 3. After a div.</p>
-      <p>Paragraph 4. After a div.</p>
-    <div class="generalSibling-selector"> 
+    </div>
+    <p>Paragraph 3. After a div.</p>
+    <p>Paragraph 4. After a div.</p>
+    <div class="generalSibling-selector">
       <p>Paragraph 2.</p>
     </div>
-      <p>Paragraph 3.</p>
-     <code>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</code>
-      <p>Paragraph 4.</p>
-    <footer >
+    <p>Paragraph 3.</p>
+    <code
+      >At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+      praesentium voluptatum deleniti atque corrupti quos dolores</code
+    >
+    <p>Paragraph 4.</p>
+    <footer>
       <div class="media-icons">
-        <a href="#"><img class="icon" src="/facebook (2).png" alt="facebook-icon" /></a>
-        <a href="#"><img class="icon" src="/twitter.png" alt="twitter-icon" /></a>
-        <a href="#"><img class="icon" src="/linkedin.png" alt="linkedin-icon" /></a>
+        <a href="#"
+          ><img class="icon" src="facebook (2).png" alt="facebook-icon"
+        /></a>
+        <a href="#"
+          ><img class="icon" src="twitter.png" alt="twitter-icon"
+        /></a>
+        <a href="#"
+          ><img class="icon" src="linkedin.png" alt="linkedin-icon"
+        /></a>
       </div>
       <div class="legal">&copy;2021 by Jules.All rights reserved.</div>
       <div class="faq">
         <ul class="faq-links">
           <li class="faq-list"><a class="white" href="#">FAQ</a></li>
           <li class="faq-list">
-            <a class="white"  href="#">Terms of service</a>
+            <a class="white" href="#">Terms of service</a>
           </li>
-          <li class="faq-list"> <a class="white" href="#">Privacy policy</li>
+          <li class="faq-list"><a class="white" href="#">Privacy policy</a></li>
         </ul>
-      </div>  
-     <div class="container">
-     <form  onreset="onReset()" onsubmit="onSubmit()">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" onblur="onBlur()"  onfocus="onFocus(this.id)" placeholder="Your name..">
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname"  onfocus="myFunction(this.id)" oninput="onInput()"  placeholder="Your last name..">
-    <p id="lastname"></p>
-    <label for="age">age</label>
-    <input type="text" id="age" name="age" onfocus="myFunction(this.id)" onkeyup="onKeyup()" placeholder="age..">
-    <label for="number">number</label>
-    <input type="text" id="number" name="number" onkeydown="onKeydown()" oninput="onInput()" placeholder="number..">
-    <label for="country">Country</label>
-    <select id="country" name="country" onchange="onChange()">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-    <p id="demo"></p>
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." oninvalid="alert('you must fill out the form')" onselect="onSelect()" style="height:200px"></textarea>
-    <input  type="submit" value="Submit"> 
-    <input type="reset">
-    <p id="submit-message"></p>  
-     </form>
-    </div>
+      </div>
+      <div class="container">
+        <form onreset="onReset()" onsubmit="onSubmit()">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            onblur="onBlur()"
+            onfocus="onFocus(this.id)"
+            placeholder="Your name.."
+          />
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            onfocus="myFunction(this.id)"
+            oninput="onInput()"
+            placeholder="Your last name.."
+          />
+          <p id="address"></p>
+          <label for="address">Address</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            onkeydown="onKeydown()"
+            oninput="onInput()"
+            placeholder="Address.."
+          />
+          <label for="dob">Date of birth</label>
+          <input type="date" id="bday" name="bday" value="" />
+          <label for="number">Mobile-number</label>
+          <input
+            type="text"
+            id="number"
+            name="number"
+            placeholder="Mobile-number.."
+            class="form-control"
+            pattern="[1-9]{1}[0-9]{9}"
+          />
+          <label for="country">Country</label>
+          <select id="country" name="country" onchange="onChange()">
+            <option value="australia" disabled>India</option>
+            <option value="canada" disabled>Canada</option>
+            <option value="usa" disabled>USA</option>
+          </select>
+          <p id="demo"></p>
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            oninvalid="alert('you must fill out the form')"
+            onselect="onSelect()"
+            style="height: 200px"
+          ></textarea>
+          <input type="submit" value="Submit" />
+          <input type="reset" />
+          <p id="submit-message"></p>
+        </form>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>
