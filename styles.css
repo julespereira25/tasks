@@ -280,3 +280,9 @@ picture {
     text-align: center;
   }
 }
+
+@media (max-width: 760px) {
+  .button {
+    width: 65px;
+  }
+}

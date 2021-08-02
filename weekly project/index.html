@@ -10,49 +10,84 @@
   <body>
     <nav class="sticky">
       <ul class="nav-menu">
-        <li class="list"><a class="link" href="#">Calculator</a></li>
-        <li class="list"><a class="link" href="#">Home</a></li>
-        <li class="list"><a class="link" href="#">Tables</a></li>
+        <li class="list"><img src="calculator.png" alt="calculator"></li>
+        <li class="list"><h3>CALCULATOR</h3></li>
+        <li class="list"><a class="link home" href="#">HOME</a></li>
+        <li class="list"><a class="link tables" href="#">TABLES</a></li>
         <li class="list">
-          <a class="link green" href="#">Factorial</a>
+          <a class="link factorial" href="#">FACTORIAL</a>
         </li>
       </ul>
+      <div class="hamburger"></div>
     </nav>
 
     <div class="title">
-      <table width="100%" border="5">
+      <table >
         <tr>
           <td colspan="4"><input type="text" id="result" /></td>
         </tr>
         <tr>
-          <td><input class="button" type="button" value="1" /></td>
-          <td><input class="button" type="button" value="2" /></td>
-          <td><input class="button" type="button" value="3" /></td>
-          <td><input class="button" type="button" value="/" /></td>
+          <td>
+            <input class="button" type="button" onclick="dis('1')" value="1" />
+          </td>
+          <td>
+            <input class="button" type="button" onclick="dis('2')" value="2" />
+          </td>
+          <td>
+            <input class="button" type="button" onclick="dis('3')" value="3" />
+          </td>
+          <td>
+            <input class="button-operator" type="button" onclick="dis('/')" value="/" />
+          </td>
         </tr>
         <tr>
-          <td><input class="button" type="button" value="4" /></td>
-          <td><input class="button" type="button" value="5" /></td>
-          <td><input class="button" type="button" value="6" /></td>
-          <td><input class="button" type="button" value="-" /></td>
+          <td>
+            <input class="button" type="button" onclick="dis('4')" value="4" />
+          </td>
+          <td>
+            <input class="button" type="button" onclick="dis('5')" value="5" />
+          </td>
+          <td>
+            <input class="button" type="button" onclick="dis('6')" value="6" />
+          </td>
+          <td>
+            <input class="button-operator" type="button" onclick="dis('-')" value="-" />
+          </td>
         </tr>
         <tr>
-          <td><input class="button" type="button" value="7" /></td>
-          <td><input class="button" type="button" value="8" /></td>
-          <td><input class="button" type="button" value="9" /></td>
-          <td><input class="button" type="button" value="+" /></td>
+          <td>
+            <input class="button" type="button" onclick="dis('7')" value="7" />
+          </td>
+          <td>
+            <input class="button" type="button" onclick="dis('8')" value="8" />
+          </td>
+          <td>
+            <input class="button" type="button" onclick="dis('9')" value="9" />
+          </td>
+          <td>
+            <input class="button-operator" type="button" onclick="dis('+')" value="+" />
+          </td>
         </tr>
         <tr>
-          <td><input class="button" type="button" value="." /></td>
-          <td><input class="button" type="button" value="0" /></td>
-          <td><input class="button" type="button" value="=" /></td>
-          <td><input class="button" type="button" value="*" /></td>
+          <td>
+            <input class="button" type="button" onclick="dis('.')" value="." />
+          </td>
+          <td>
+            <input class="button" type="button" onclick="dis('0')" value="0" />
+          </td>
+          <td>
+            <input class="button-operator" type="button" onclick="solve()" value="=" />
+          </td>
+          <td>
+            <input class="button-operator" type="button" onclick="dis('*')" value="*" />
+          </td>
         </tr>
         <tr>
           <td colspan="4">
             <input
               type="button"
               class="button"
+              onclick="clr()"
               value="CLR"
               style="width: 100%"
             />
@@ -60,16 +95,16 @@
         </tr>
       </table>
     </div>
-    <div class="box">
-      <h1 class="heading">Factorial series</h1>
+    <div class="box d-none">
+      <h1 class="heading">FACTORIAL SERIES</h1>
       <div class="input">
         <input
           type="text"
           class="factorialInput"
           name="factorial"
-          placeholder="inputFactorial"
+          placeholder="Input"
         />
-        <input class="factorialButton" type="button" value="Show factorial" />
+        <input class="factorialButton" type="button" value="SHOW FACTORIAL" />
       </div>
       <p>
         <h2 class="output">The factorial of the number is</h2>
@@ -78,8 +113,8 @@
         <h2 class="output-value"></h2>
       </p>
     </div>
-    <div class="box-1">
-      <h1 class="heading">Multiplication table</h1>
+    <div class="box-1 d-none ">
+      <h1 class="heading">MULTIPLICATION TABLE</h1>
       <div class="input">
         <input
           type="text"
@@ -89,10 +124,10 @@
         <input
           type="text"
           class="endingInput"
-          placeholder="ending number"
+          placeholder="Ending number"
         />
       </div>
-      <input class="showTables" type="button" value="Show tables" />
+      <input class="showTables" type="button" value="SHOW TABLES" />
       <p>
         <h2 class="table-output"></h2>
       </p>

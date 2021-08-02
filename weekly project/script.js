@@ -52,6 +52,53 @@ function Tables(start, end) {
   }
 }
 
-function calculator(value){
-  
+function clr() {
+  document.getElementById("result").value = "";
 }
+
+function dis(val) {
+  document.getElementById("result").value += val;
+}
+
+function solve() {
+  let x = document.getElementById("result").value;
+  let y = eval(x);
+  document.getElementById("result").value = y;
+}
+
+const factorialLink = document.querySelector(".factorial");
+const calculatorLink = document.querySelector(".home");
+const multiplicationLink = document.querySelector(".tables");
+const box1 = document.querySelector(".box-1");
+const box = document.querySelector(".box");
+const title = document.querySelector(".title");
+
+factorialLink.addEventListener("click", factorialBox);
+multiplicationLink.addEventListener("click", multiplicationTables);
+calculatorLink.addEventListener("click", calculatorDisplay);
+
+function factorialBox() {
+  title.classList.add("d-none");
+  box1.classList.add("d-none");
+  box.classList.remove("d-none");
+}
+
+function multiplicationTables() {
+  title.classList.add("d-none");
+  box.classList.add("d-none");
+  box1.classList.remove("d-none");
+}
+
+function calculatorDisplay() {
+  box.classList.add("d-none");
+  box1.classList.add("d-none");
+  title.classList.remove("d-none");
+}
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
