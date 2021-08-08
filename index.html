@@ -32,12 +32,14 @@
             <a class="nav-link signupNav" href="#">Signup</a>
             <a class="nav-link loginNav" href="#">Login</a>
           </div>
+          
         </div>
+        <p class="displayUser"> </p>
       </div>
     </nav>
     <!-- Login -->
     <form
-      onsubmit="validatePassword()"
+      onsubmit="validationLogin()"
       class="container login mt-5"
       action="#"
       style="max-width: 400px"
@@ -49,22 +51,24 @@
         <div class="input-group">
           <input
             type="text"
-            class="form-control"
+            class="form-control loginEmail"
             placeholder="email@gmail.com"
             value=""
           />
         </div>
+        <p class="loginEmailValidate"></p>
       </div>
       <div class="row d-flex justify-content-center">
         <label>Password</label>
         <div class="input-group">
           <input
             type="password"
-            class="form-control"
+            class="form-control loginPassword"
             placeholder="password"
             value=""
           />
         </div>
+        <p class="loginPasswordValidate"></p>
 
         <div class="col-lg-4"></div>
       </div>
@@ -125,7 +129,7 @@
         <div class="input-group">
           <input
             type="password"
-            class="form-control loginPassword"
+            class="form-control signupPassword"
             placeholder="password"
           />
         </div>

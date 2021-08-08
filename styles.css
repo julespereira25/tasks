@@ -51,7 +51,13 @@ input[type="text"] {
 .passwordValidate,
 .nameValidate,
 .password,
-.differentMail {
+.differentMail,
+.loginEmailValidate,
+.loginPasswordValidate {
   color: red;
   text-align: center;
+}
+
+.displayUser {
+  margin-top: 20px;
 }

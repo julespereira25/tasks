@@ -31,95 +31,50 @@ icon1.addEventListener("click", () => {
   signupForm.classList.add("display-none");
 });
 
-// loginButton.addEventListener("click", validateEmail);
-// loginButton.addEventListener("click", validatePassword);
-//Email validation
+function validationLogin() {
+  var loginEmailValidate = document.querySelector(".loginEmailValidate");
+  var loginEmail = document.querySelector(".loginEmail").value;
+  var emailformat1 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  var loginPassword = document.querySelector(".loginPassword").value;
+  var loginPasswordValidate = document.querySelector(".loginPasswordValidate");
+  var displayUser = document.querySelector(".displayUser");
+  let str = loginEmail;
+  const myArr = str.split("@");
+  const myArr1 = myArr[0];
+  const myArr2 = myArr[1];
+  const myArrUppercase = myArr1[0].toUpperCase() + myArr1.slice(1);
 
-// function validateEmail() {
-//   var emailValidate = document.querySelector(".emailValidate");
-//   var email = document.querySelector(".email").value;
-//   var loginPassword = document.querySelector(".loginPassword").value;
-//   var passwordValidate = document.querySelector(".passwordValidate");
-//   var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-//   if (email.test(emailformat)) {
-//     return true;
-//   }
-//   if (email == "") {
-//     emailValidate.innerHTML = "Email field is blank...please return a value";
-//     return false;
-//   } else {
-//     emailValidate.innerHTML = "Please provide the valid email format";
-//     return false;
-//   }
+  console.log(myArrUppercase);
 
-//   if (loginPassword == "") {
-//     passwordValidate.innerHTML = "Fill the password please!";
-//     return false;
-//   }
-//   if (loginPassword.length < 7) {
-//     passwordValidate.innerHTML = "Password length must be atleast 7 characters";
-//     return false;
-//   } else {
-//     return true;
-//   }
+  if (loginEmail != "" && emailformat1.test(loginEmail)) {
+    loginEmailValidate.innerHTML = "";
+  } else {
+    loginEmailValidate.innerHTML = "Please provide the valid email format";
+  }
+  console.log("this is " + loginEmailValidate);
 
-// }
+  if (loginPassword.length < 7) {
+    loginPasswordValidate.innerHTML =
+      "Password length must be atleast 7 characters";
+  } else {
+    loginPasswordValidate.innerHTML = "";
+  }
+  if (loginPassword == "") {
+    loginPasswordValidate.innerHTML = "Input a value for password";
+  }
 
-// function validateSignup() {
-//   var emailValidate = document.querySelector(".emailValidate");
-//   var email = document.querySelector(".email").value;
-//   var loginPassword = document.querySelector(".loginPassword").value;
-//   var passwordValidate = document.querySelector(".passwordValidate");
-//   var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-//   if (email.test(emailformat)) {
-//     return true;
-//   }
-//   if (email == "") {
-//     emailValidate.innerHTML = "Email field is blank...please return a value";
-//     return false;
-//   } else {
-//     emailValidate.innerHTML = "Please provide the valid email format";
-//     return false;
-//   }
+  if (
+    loginEmail != "" &&
+    emailformat1.test(loginEmail) &&
+    loginPassword.length > 7
+  ) {
+    displayUser.innerHTML = "Welcome " + myArrUppercase + "!!!!";
+  }
 
-//   if (loginPassword == "") {
-//     passwordValidate.innerHTML = "Fill the password please!";
-//     return false;
-//   }
-//   if (loginPassword.length < 7) {
-//     passwordValidate.innerHTML = "Password length must be atleast 7 characters";
-//     return false;
-//   } else {
-//     return true;
-//   }
-// }
-
-// function validateSignup() {
-//   var name1 = document.querySelector(".name1").value;
-//   var nameValidate = document.querySelector(".nameValidate");
-//   var emailValidate = document.querySelector(".emailValidate");
-//   var email = document.querySelector(".email").value;
-//   var loginPassword = document.querySelector(".loginPassword").value;
-//   var passwordValidate = document.querySelector(".passwordValidate");
-//   var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-//   if (name1 == "") {
-//     nameValidate.innerHTML = "Name field is blank...please return a value";
-//     return false;
-//   } else {
-//     return true;
-//   }
-
-//   if (loginPassword == "") {
-//     passwordValidate.innerHTML = "Fill the password please!";
-//     return false;
-//   }
-//   if (loginPassword.length < 7) {
-//     passwordValidate.innerHTML = "Password length must be atleast 7 characters";
-//     return false;
-//   } else {
-//     return true;
-//   }
-// }
+  if (myArr2 == "gmail.com") {
+    displayUser.style.color = "green";
+  }
+}
 
 function validationForm() {
   var name1 = document.querySelector(".name1").value;
@@ -127,7 +82,7 @@ function validationForm() {
   var emailValidate = document.querySelector(".emailValidate");
   var email = document.querySelector(".email").value;
   var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  var loginPassword = document.querySelector(".loginPassword").value;
+  var signupPassword = document.querySelector(".signupPassword").value;
   var passwordValidate = document.querySelector(".passwordValidate");
   var confirmPassword = document.querySelector(".confirmPassword").value;
   var password = document.querySelector(".password");
@@ -146,54 +101,37 @@ function validationForm() {
   }
   console.log("this is " + email);
 
-  if (loginPassword.length < 7) {
+  if (signupPassword.length < 7) {
     passwordValidate.innerHTML = "Password length must be atleast 7 characters";
   } else {
     passwordValidate.innerHTML = "";
   }
-  if (loginPassword == "") {
+  if (signupPassword == "") {
     passwordValidate.innerHTML = "Input a value for password";
   }
 
-  console.log("this is " + loginPassword);
+  console.log("this is " + signupPassword);
 
-  if (confirmPassword != loginPassword) {
+  if (confirmPassword != signupPassword) {
     password.innerHTML = "password is not matching";
   } else {
     password.innerHTML = "";
   }
-  let array = [];
-  let userInput = { name: name1, username: email, password: loginPassword };
+
+  let userInput = { name: name1, username: email, password: signupPassword };
 
   console.log(userInput);
 
-  array.push(userInput.username);
-  console.log(array);
-
-  if (array.includes(userInput.username)) {
+  let existingUsersFromLocalStorage =
+    JSON.parse(localStorage.getItem("users")) || [];
+  if (existingUsersFromLocalStorage.includes(userInput.username)) {
     differentMail.innerHTML = "Sorry you have already entered this email";
   } else {
     differentMail.innerHTML = "";
+    existingUsersFromLocalStorage.push(userInput.username);
+    localStorage.setItem(
+      "users",
+      JSON.stringify(existingUsersFromLocalStorage)
+    );
   }
-
-  localStorage.setItem("users", JSON.stringify(array));
-
-  console.log(localStorage);
-
-  let obj = JSON.parse(localStorage.getItem("users"));
-
-  console.log(obj);
-
-  // let array1 = localStorage.getItem("users");
-
-  // if (array1 ) {
-
-  // //please assign the variable array with the value from array1 after parsing.
-  // array = JSON.parse(array1)
-
-  // }
-
-  // localStorage.setItem("users", JSON.stringify(array1));
-
-  // JSON.parse(localStorage);
 }
