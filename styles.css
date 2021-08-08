@@ -50,7 +50,8 @@ input[type="text"] {
 .emailValidate,
 .passwordValidate,
 .nameValidate,
-.password {
+.password,
+.differentMail {
   color: red;
   text-align: center;
 }

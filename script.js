@@ -94,32 +94,32 @@ icon1.addEventListener("click", () => {
 //   }
 // }
 
-function validateSignup() {
-  var name1 = document.querySelector(".name1").value;
-  var nameValidate = document.querySelector(".nameValidate");
-  var emailValidate = document.querySelector(".emailValidate");
-  var email = document.querySelector(".email").value;
-  var loginPassword = document.querySelector(".loginPassword").value;
-  var passwordValidate = document.querySelector(".passwordValidate");
-  var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if (name1 == "") {
-    nameValidate.innerHTML = "Name field is blank...please return a value";
-    return false;
-  } else {
-    return true;
-  }
+// function validateSignup() {
+//   var name1 = document.querySelector(".name1").value;
+//   var nameValidate = document.querySelector(".nameValidate");
+//   var emailValidate = document.querySelector(".emailValidate");
+//   var email = document.querySelector(".email").value;
+//   var loginPassword = document.querySelector(".loginPassword").value;
+//   var passwordValidate = document.querySelector(".passwordValidate");
+//   var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//   if (name1 == "") {
+//     nameValidate.innerHTML = "Name field is blank...please return a value";
+//     return false;
+//   } else {
+//     return true;
+//   }
 
-  if (loginPassword == "") {
-    passwordValidate.innerHTML = "Fill the password please!";
-    return false;
-  }
-  if (loginPassword.length < 7) {
-    passwordValidate.innerHTML = "Password length must be atleast 7 characters";
-    return false;
-  } else {
-    return true;
-  }
-}
+//   if (loginPassword == "") {
+//     passwordValidate.innerHTML = "Fill the password please!";
+//     return false;
+//   }
+//   if (loginPassword.length < 7) {
+//     passwordValidate.innerHTML = "Password length must be atleast 7 characters";
+//     return false;
+//   } else {
+//     return true;
+//   }
+// }
 
 function validationForm() {
   var name1 = document.querySelector(".name1").value;
@@ -131,6 +131,7 @@ function validationForm() {
   var passwordValidate = document.querySelector(".passwordValidate");
   var confirmPassword = document.querySelector(".confirmPassword").value;
   var password = document.querySelector(".password");
+  var differentMail = document.querySelector(".differentMail");
 
   if (name1 == "") {
     nameValidate.innerHTML = "Name field is blank...please return a value";
@@ -145,9 +146,6 @@ function validationForm() {
   }
   console.log("this is " + email);
 
-  // if (loginPassword == "") {
-  //   passwordValidate.innerHTML = "Fill the password please!";
-  // }
   if (loginPassword.length < 7) {
     passwordValidate.innerHTML = "Password length must be atleast 7 characters";
   } else {
@@ -164,36 +162,38 @@ function validationForm() {
   } else {
     password.innerHTML = "";
   }
-
+  let array = [];
   let userInput = { name: name1, username: email, password: loginPassword };
 
   console.log(userInput);
 
-  console.log("this is " + confirmPassword);
-
-  let array = [];
-
-  let array1 = localStorage.getItem("users");
-
-if (array1 ) {
-
- 
-//please assign the variable array with the value from array1 after parsing.
-array = JSON.parse(array1) 
-
-}
-
-
-
-
-  array.push(userInput);
+  array.push(userInput.username);
   console.log(array);
 
-  // localStorage.setItem("users", JSON.stringify(array));
+  if (array.includes(userInput.username)) {
+    differentMail.innerHTML = "Sorry you have already entered this email";
+  } else {
+    differentMail.innerHTML = "";
+  }
 
-  localStorage.setItem("users", JSON.stringify(array1));
+  localStorage.setItem("users", JSON.stringify(array));
 
-  JSON.parse(localStorage);
+  console.log(localStorage);
 
-  localStorage.getItem("users");
+  let obj = JSON.parse(localStorage.getItem("users"));
+
+  console.log(obj);
+
+  // let array1 = localStorage.getItem("users");
+
+  // if (array1 ) {
+
+  // //please assign the variable array with the value from array1 after parsing.
+  // array = JSON.parse(array1)
+
+  // }
+
+  // localStorage.setItem("users", JSON.stringify(array1));
+
+  // JSON.parse(localStorage);
 }
