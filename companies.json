@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Sony",
+    "numberOfEmployees": 10000,
+    "ceo": "John",
+    "rating": 3.6
+  },
+  {
+    "name": "Samsung",
+    "numberOfEmployees": 120000,
+    "ceo": null,
+    "rating": 4.5
+  }
+]

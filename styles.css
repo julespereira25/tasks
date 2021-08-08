@@ -1,282 +1,56 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
-  font-family: "Roboto", sans-serif;
+  background-color: bisque !important;
+  font-family: "poppins", sans-serif !important;
+}
+
+nav {
   background-color: white;
 }
 
-.nav-menu {
-  list-style: none;
-  display: flex;
-  font-size: 2rem;
-  padding: 1rem 1.5rem;
-  align-items: center;
+form {
+  border: 1px solid black;
+  border-radius: 10px;
+  max-width: 540px;
+  background-color: #00ad6f;
 }
 
-.link {
-  color: black;
-  text-decoration: none;
+.Login {
+  margin-top: 20px;
 }
 
-.link:hover {
-  color: #2899d2;
-}
-
-.hamburger {
+.display-none {
   display: none;
 }
 
-.list {
-  padding: 1rem 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-
-  .nav-menu.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10rem;
-  }
-
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    right: 15px;
-    top: 35px;
-    position: absolute;
-    background: url(https://i.ibb.co/HrfVRcx/menu.png) no-repeat;
-  }
-}
-
-.hamburger.active {
-  background: url(https://i.ibb.co/rt3HybH/close.png);
-  background-repeat: no-repeat;
-  width: 40px;
-  height: 40px;
-}
-
-.icon {
-  width: 30px;
-  padding-right: 1rem;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 15rem;
-  margin-left: 10rem;
-}
-
-.media-icons {
-  padding-bottom: 2rem;
-}
-
-.faq {
-  margin-top: 2rem;
-  margin-left: 1rem;
-}
-
-.faq-links {
-  display: flex;
-}
-
-.faq-list {
-  list-style: none;
-  color: black;
-}
-
-.white {
-  color: black;
-  padding-right: 1rem;
-}
-
-.video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-}
-
-.static {
-  position: static;
-  margin-top: 100px;
-}
-
-.fixed {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 300px;
-  border: 3px solid yellow;
-  border-radius: 30px;
-  list-style: none;
-}
-
-.relative {
+.login,
+.signup {
   position: relative;
-  width: 400px;
-  height: 200px;
-  border: 3px solid #73ad21;
 }
 
-.absolute {
+.icon,
+.icon1 {
   position: absolute;
-  top: 80px;
-  right: 0;
-  width: 200px;
-  height: 100px;
-  border: 3px solid #73ad21;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
 }
 
-.sticky {
-  position: sticky;
-  top: 0;
-  padding: 5px;
-  background-color: white;
-  z-index: 1;
+input[type="text"] {
+  background-color: #c5e8db;
 }
 
-.child-one {
-  left: 50%;
+.switch,
+.switch1 {
+  color: black !important;
+  text-decoration: none;
 }
 
-.parent {
-  height: 200px;
-  padding: 5px;
-  position: relative;
-  z-index: -1;
-}
-
-.child {
-  padding: 5px;
-  position: absolute;
-}
-
-.child-two {
-  color: tan;
-  top: 200px;
-  position: absolute;
-  bottom: 15px;
+.emailValidate,
+.passwordValidate,
+.nameValidate,
+.password {
+  color: red;
   text-align: center;
-  font-size: 1.5rem;
-  width: 100%;
-}
-
-.icon-arrow {
-  position: fixed;
-  bottom: 150px;
-  right: 20px;
-  width: 50px;
-}
-
-picture {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-}
-
-.view {
-  border-radius: 50px;
-}
-
-.text {
-  position: absolute;
-  top: 200px;
-  left: 15%;
-  color: white;
-}
-
-.text h2 {
-  font-size: 8rem;
-  line-height: 7rem;
-  text-transform: uppercase;
-}
-
-.text h3 {
-  font-size: 6rem;
-  text-transform: uppercase;
-}
-
-.travel {
-  font-size: 3rem;
-}
-
-@media (max-width: 768px) {
-  .text h2 {
-    font-size: 5rem;
-    line-height: 6rem;
-  }
-
-  .text h3 {
-    font-size: 2rem;
-  }
-  .travel {
-    font-size: 1.3rem;
-    padding-top: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-}
-
-.man {
-  width: 100px;
-  border-radius: 50px;
-  margin-top: 50px;
-  background-color: grey;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
-  background-color: white;
-  z-index: 1;
-}
-
-.man-name {
-  color: tan;
-  font-size: 1.5rem;
-  margin-top: 10px;
-}
-
-.wanderlust {
-  font-size: 3rem;
-  color: tan;
-  text-align: center;
-  padding-bottom: 2rem;
-}
-
-.appeal {
-  font-size: 2rem;
-  line-height: 4rem;
-  margin-left: 15rem;
-  margin-right: 15rem;
-}
-
-@media (max-width: 768px) {
-  .appeal {
-    font-size: 1rem;
-    line-height: 3rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    text-align: center;
-  }
 }
