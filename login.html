@@ -16,7 +16,6 @@
   <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      
       <div class="container">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list hamburger" viewBox="0 0 16 16">
@@ -53,7 +52,7 @@
             </li>
           </ul>
            <div class="button-header">
-          <button type="button" class="btn btn-primary btn-lg header-button">Login/Signup</button>
+            <a href="login.html" type="button" class="btn btn-primary btn-lg header-button" >Login/Signup</a>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
           </svg>
@@ -78,78 +77,60 @@
 
      <!-- navbar -->
 
-   <!-- breadcrumb -->
+     
      <nav style="--bs-breadcrumb-divider: '>'; margin-top: 7rem; margin-left: 15rem;" aria-label="breadcrumb">
-      <div class="col-md-12 md-6 sm-3">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a style="text-decoration:none" href="index.html">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Contact us</li>
+        <li class="breadcrumb-item active" aria-current="page">About us</li>
       </ol>
-    </div>
     </nav>
-     <!-- breadcrumb -->
 
-     <!-- contact-header-image -->
 
-     <div class="contact-image">
-      <img src="./img/contact-us-banner_2048x.png" class="img-fluid w-100" alt="Responsive image">
-      <div class="top-left">
-        <h1>Contact Us</h1>
-        <ul>
-          <li>We’re here to help answer any questions you might have.</li>
-          <li>We look forward to hearing from you at care@justher.in or <br>contact us at +91 9319711266<br></li>
-        </ul></div>
-    </div> 
+  </div>
+
+  <section class="offers" >
+    <h2 class="section-heading">ALREADY REGISTERED?</h2>
+    <div class="row" >
+      <div class="col-sm-6 col-md-4 col-lg-6">
+        <div class="card" style="width: 25rem;">
+          <div class="card-body">
+            <p class="card-text">NEW CUSTOMER</p>
+            <p class="card-text">By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+            <a href="register.html" type="button" class="btn btn-outline-secondary cart-button ">Login/Signup</a>
+          </div>
+        </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-6">
+          <div class="card" style="width: 25rem;">
+            <div class="card-body">
+              <p class="card-text">LOGIN</p>
+              <p class="card-text">If you have an account with us, please log in.</p>
+              <ul class="login-list">
+                <li class="login-validate"></li>
+              </ul>
+              <form action="/" method="GET">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-primary login-submit">Submit</button>
+              </form>
+            </div>
+          </div>
+          </div>
+        <section >
+
+
     
 
 
-  <div class=" section container container-fluid-custom-mobile-padding">
-    <div class="contact-form form-default col-lg-11 m-auto custom-contact-form">
-      <h3 class="text-center contact-form-title">Submit your query</h3><form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="contact-form" onsubmit="window.Shopify.recaptchaV3.addToken(this, &quot;contact&quot;); return false;"><input type="hidden" name="form_type" value="contact"><input type="hidden" name="utf8" value="✓">
 
-      <div class="row">
-        <div class="col-md-12 form-box1" style="display: flex;
-        justify-content: space-between;margin-bottom:15px">
-          <div class="form-group">
-            <label>Name</label>
-            <input type="text" name="contact[name]" value="" class="form-control custom-input" id="inputName" placeholder="First &amp; Last name">
-          </div>
-          <div class="form-group">
-            <label>E-mail</label>
-            <input type="email" name="contact[email]" autocorrect="off" autocapitalize="off" value="" class="form-control custom-input" id="inputEmail" placeholder="joe@schmoe.com">
-          </div>
-          <div class="form-group">
-            <label>Phone No.</label>
-            <input type="tel" name="contact[phone]" pattern="[0-9]{10}" title="Phone no. should be numeric e.g. 8900008989" value="" class="form-control custom-input" id="inputSubject" placeholder="Enter 10 digit no.">
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="form-group message-box">
-            <label>Message</label>
-            <textarea name="contact[body]" class="form-control custom-input" rows="8" placeholder="Your Message" id="textareaMessage"></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="">
-        <button type="submit" class="btn ttbtnmainstyle">Submit</button>
-      </div>
-    </form>
-  </div>  
-  </div> 
-
- 
-
-
- <section class="content">
- <div class="card contact-content">
-  <div class="card-body">
-    <h2 class="card-title">Headquarters</h2>
-    <p class="card-text">Bright Lifecare Pvt. Ltd.</p>
-    <p class="card-text">3rd Floor, Parsvnath Arcadia, T 01, M G Road Sector-14, Gurgaon - 122001, Haryana, India</p>
-  </div>
-</div>
-</section> 
-
+       
 
 
 
@@ -236,8 +217,6 @@
 </div>
     </section>
   </footer>
-
-
     <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
