@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+      
+      <div class="container">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list hamburger" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+          </div>
+        <a class="navbar-brand " aria-current="page" href="index.html"
+          ><img src="./img/justher-logo.png" class="logo-image" alt="image-logo"
+        /></a>
+      
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link"href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item d-flex align-items-center" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag" viewBox="0 0 16 16">
+                <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z"/>
+                <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z"/>
+              </svg>
+              <a class="nav-link" href="#">Exclusive offers</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <img src="./img/about-us.svg" alt="">
+              <a class="nav-link" href="about.html">About us</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+              </svg>
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+           <div class="button-header">
+             <a href="login.html" type="button" class="btn btn-primary btn-lg header-button" >Login/Signup</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
+          <span class='badge badge-warning' id='lblCartCount'>0</span>
+        </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="menu display-none">
+      <ul class="sidebar">
+        <li class="side"> <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x close" viewBox="0 0 16 16">
+          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+        </svg></i><a class=" nav-side" href="#">Close</a></li>
+        <li class="side"><a class="nav-sidebar" href="shop.html">Shop</a></li>
+        <li class="side"><a class="nav-sidebar" href="#">Blog</a></li>
+        <li class="side"><a class="nav-sidebar" href="#">Exclusive offers</a></li>
+        <li class="side"><a class="nav-sidebar" href="about.html">About us</a></li>
+        <li class="side"><a class="nav-sidebar" href="contact.html">Contact us</a></li>
+        <li class="side"><a class="nav-sidebar" href="login.html">Login/Signup</a></li>
+      </ul>
+    </div>
+     <!-- navbar -->
+
+  </div>
+
+
+
+  <div class="container">
+    <nav style="--bs-breadcrumb-divider: '>'; margin-top: 7rem;" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a style="text-decoration:none" href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Shop</li>
+      </ol>
+    </nav>
+    <div class="row">
+      <div class="product-heading">
+        <h1>All Products</h1>
+      </div>
+        
+          <div class="d-flex mt-2 mb-4">
+      <div class="feature-icon2 f-icon ">
+        <div>
+          <select class="sort-position">
+            <option value="manual" selected="">Featured</option>
+            <option value="title-ascending">Name Ascending</option>
+            <option value="title-descending">Name Descending</option>
+            <option value="created-ascending">Date Ascending</option>
+            <option value="created-descending">Date Descending</option>
+            <option value="price-ascending">Price Ascending</option>
+            <option value="price-descending">Price Descending</option>
+            <option value="best-selling">Best Selling</option>
+          </select>
+        </div>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+        </svg> -->
+      </div>
+      <div class="feature-icon3 f-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x3-gap-fill" viewBox="0 0 16 16">
+          <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
+        </svg>
+      </div>
+      <div class="feature-icon4 f-icon px-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x3-gap" viewBox="0 0 16 16">
+          <path d="M4 2v2H2V2h2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zM9 2v2H7V2h2zm5 0v2h-2V2h2zM4 7v2H2V7h2zm5 0v2H7V7h2zm5 0h-2v2h2V7zM4 12v2H2v-2h2zm5 0v2H7v-2h2zm5 0v2h-2v-2h2zM12 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zm-1 6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zm1 4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2z"/>
+        </svg>
+      </div>
+      <div class="feature-icon5 f-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x3" viewBox="0 0 16 16">
+          <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5V5h4V1H1.5zM5 6H1v4h4V6zm1 4h4V6H6v4zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5v-4zm1 0v4h4v-4H6zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11h-4zm0-1h4V6h-4v4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11v4zm-1 0V1H6v4h4z"/>
+        </svg>
+      </div>
+    </div>
+      <div class="cardgroup col-lg-3 col-md-6 col-sm-6">
+        <div class="card protein-tubs">
+          <img class="card-img-top" src="./img/collagen_main_image.jpg" alt="collagen">
+          <div class="card-body">
+            <p class="card-text">JustHer Collagen Builder Herbs</p>
+            <div class="stars"> 
+              <span class="star on"></span>
+              <span class="star on"></span>
+              <span class="star on"></span>
+              <span class="star on"></span>
+              <span class="star half"></span>
+              <span>
+                90 Reviews
+               </span>
+             </div>
+          <ul class="d-flex discount-price  align-items-center">
+            <li>Rs. 629.00</li>
+            <li>Rs. 899.00</li>
+            <li>30% Off</li>
+          </ul>
+          <ul class="d-flex product-pack">
+            <li>250g</li>
+            <li>7 Day Pack</li>
+          </ul>
+          <ul class="product-color">
+            <span>Lemon Anar fusion</span>
+          </ul>
+          <button type="button" class="btn btn-outline-secondary cart-button ">Add to cart</button>
+          </div>
+        </div>
+        </div>
+        <div class="cardgroup col-lg-3 col-md-6 col-sm-6">
+          <div class="card protein-tubs">
+            <img class="card-img-top" src="./img/just_her_pms.jpg" alt="just_her">
+            <div class="card-body">
+              <p class="card-text">JustHer PMS Relief With Herbs</p>
+              <div class="stars"> 
+                <span class="star on"></span>
+                <span class="star on"></span>
+                <span class="star on"></span>
+                <span class="star on"></span>
+                <span>
+                  70 Reviews
+                 </span>
+               </div>
+            <ul class="d-flex discount-price  align-items-center">
+              <li>Rs. 300.00</li>
+              <li>Rs. 400.00</li>
+              <li>30% Off</li>
+            </ul>
+            <ul class="d-flex product-pack">
+              <li>200g</li>
+              <li>5 Day Pack</li>
+            </ul>
+            <ul class="product-color">
+              <span>Masala Twist</span>
+            </ul>
+            <button type="button" class="btn btn-outline-secondary cart-button ">Pre-order</button>
+            </div>
+          </div>
+          </div>
+          <div class="cardgroup col-lg-3 col-md-6 col-sm-6">
+            <div class="card protein-tubs">
+              <img class="card-img-top" src="./img/DailyProtein_HaldiOffer_580x.jpg" alt="collagen">
+              <div class="card-body">
+                <p class="card-text">JustHer Daily Protein Herbs</p>
+                <div class="stars"> 
+                  <span class="star on"></span>
+                  <span class="star on"></span>
+                  <span class="star on"></span>
+                  <span>
+                    60 Reviews
+                   </span>
+                 </div>
+              <ul class="d-flex discount-price  align-items-center">
+                <li>Rs. 529.00</li>
+                <li>Rs. 629.00</li>
+                <li>30% Off</li>
+              </ul>
+              <ul class="d-flex product-pack">
+                <li>150g</li>
+                <li>4 Day Pack</li>
+              </ul>
+              <ul class="product-color">
+                <span>Sweet lemonade</span>
+              </ul>
+              <button type="button" class="btn btn-outline-secondary cart-button ">Add to cart</button>
+              </div>
+            </div>
+            </div>
+            <div class="cardgroup col-lg-3 col-md-6 col-sm-6">
+              <div class="card protein-tubs">
+                <img class="card-img-top" src="./img/pcos_Relief_with_herbs.jpg" alt="collagen">
+                <div class="card-body">
+                  <p class="card-text">JustHer Collagen Builder Herbs</p>
+                  <div class="stars"> 
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star half"></span>
+                    <span>
+                      40 Reviews
+                     </span>
+                   </div>
+                <ul class="d-flex discount-price  align-items-center">
+                  <li>Rs. 329.00</li>
+                  <li>Rs. 429.00</li>
+                  <li>30% Off</li>
+                </ul>
+                <ul class="d-flex product-pack">
+                  <li>150g</li>
+                  <li>5 Day Pack</li>
+                </ul>
+                <ul class="product-color">
+                  <span>Unflavoured</span>
+                </ul>
+                <button type="button" class="btn btn-outline-secondary cart-button ">Add to cart</button>
+                </div>
+              </div>
+              </div>
+              <div class="cardgroup col-lg-3 col-md-6 col-sm-6">
+                <div class="card protein-tubs">
+                  <img class="card-img-top" src="./img/biotin_with_herbs.jpg" alt="collagen">
+                  <div class="card-body">
+                    <p class="card-text">JustHer Biotin with Herbs</p>
+                    <div class="stars"> 
+                      <span class="star on"></span>
+                      <span class="star on"></span>
+                      <span class="star on"></span>
+                      <span class="star on"></span>
+                      <span class="star half"></span>
+                      <span>
+                        9 Reviews
+                       </span>
+                     </div>
+                  <ul class="d-flex discount-price  align-items-center">
+                    <li>Rs. 595.00</li>
+                    <li>Rs. 699.00</li>
+                    <li>15% Off</li>
+                  </ul>
+                  <ul class="d-flex product-pack">
+                    <li>250g</li>
+                    <li>15 Day Pack</li>
+                  </ul>
+                  <ul class="product-color">
+                    <span>Tangy Anardana</span>
+                  </ul>
+                  <button type="button" class="btn btn-outline-secondary cart-button ">Add to cart</button>
+                  </div>
+                </div>
+                </div>
+                <div class="cardgroup col-lg-3 col-md-6 col-sm-6">
+                  <div class="card protein-tubs">
+                    <img class="card-img-top" src="./img/just_her_protein_with_herbs.png" alt="collagen">
+                    <div class="card-body">
+                      <p class="card-text">JustHer Collagen Builder Herbs</p>
+                      <div class="stars"> 
+                        <span class="star on"></span>
+                        <span class="star on"></span>
+                        <span class="star on"></span>
+                        <span class="star on"></span>
+                        <span class="star on"></span>
+                        <span>
+                          49 Reviews
+                         </span>
+                       </div>
+                    <ul class="d-flex discount-price  align-items-center">
+                      <li>Rs. 1,199.00</li>
+                      <li>Rs. 1,599.00</li>
+                      <li>25% Off</li>
+                    </ul>
+                    <ul class="d-flex product-pack">
+                      <li>250g</li>
+                      <li>7 Day Pack</li>
+                    </ul>
+                    <ul class="product-color">
+                      <span>Lemon Anar fusion</span>
+                    </ul>
+                    <button type="button" class="btn btn-outline-secondary cart-button ">Sold out </button>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="cardgroup col-lg-3 col-md-6 col-sm-6">
+                    <div class="card protein-tubs">
+                      <img class="card-img-top" src="./img/daily_greens.png" alt="collagen">
+                      <div class="card-body">
+                        <p class="card-text">JustHer Daily Greens & Superfoods</p>
+                        <div class="stars"> 
+                          <span class="star on"></span>
+                          <span class="star on"></span>
+                          <span class="star on"></span>
+                          <span class="star on"></span>
+                          <span class="star half"></span>
+                          <span>
+                            90 Reviews
+                           </span>
+                         </div>
+                      <ul class="d-flex discount-price  align-items-center">
+                        <li>Rs. 629.00</li>
+                        <li>Rs. 899.00</li>
+                        <li>30% Off</li>
+                      </ul>
+                      <ul class="d-flex product-pack">
+                        <li>250g</li>
+                        <li>7 Day Pack</li>
+                      </ul>
+                      <ul class="product-color">
+                        <span>Lemon Anar fusion</span>
+                      </ul>
+                      <button type="button" class="btn btn-outline-secondary cart-button ">Sold out</button>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="cardgroup col-lg-3 col-md-6 col-sm-6">
+                      <div class="card protein-tubs">
+                        <img class="card-img-top" src="./img/ReviveTeaFront_380x.jpg" alt="collagen">
+                        <div class="card-body">
+                          <p class="card-text">JustHer Revive Tea for Low BP</p>
+                          <div class="stars"> 
+                            <span class="star on"></span>
+                            <span class="star on"></span>
+                            <span class="star on"></span>
+                            <span class="star on"></span>
+                            <span class="star half"></span>
+                            <span>
+                              90 Reviews
+                             </span>
+                           </div>
+                        <ul class="d-flex discount-price  align-items-center">
+                          <li>Rs. 629.00</li>
+                          <li>Rs. 899.00</li>
+                          <li>30% Off</li>
+                        </ul>
+                        <ul class="d-flex product-pack">
+                          <li>125g</li>
+                          <li>7 Day Pack</li>
+                        </ul>
+                        <ul class="product-color">
+                          <span>Natural Lemon</span>
+                        </ul>
+                        <button type="button" class="btn btn-outline-secondary cart-button ">Add to cart</button>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="cardgroup col-lg-3 col-md-6 col-sm-6">
+                        <div class="card protein-tubs">
+                          <img class="card-img-top" src="./img/JustHerImmunity_3_380x.jpg" alt="collagen">
+                          <div class="card-body">
+                            <p class="card-text">JustHer Immunity with Herbs</p>
+                            <div class="stars"> 
+                              <span class="star on"></span>
+                              <span class="star on"></span>
+                              <span class="star on"></span>
+                              <span class="star on"></span>
+                              <span class="star on"></span>
+                              <span>
+                                6 Reviews
+                               </span>
+                             </div>
+                          <ul class="d-flex discount-price  align-items-center">
+                            <li>Rs. 629.00</li>
+                            <li>Rs. 899.00</li>
+                            <li>30% Off</li>
+                          </ul>
+                          <ul class="d-flex product-pack">
+                            <li>250g</li>
+                            <li>7 Day Pack</li>
+                          </ul>
+                          <ul class="product-color">
+                            <span>Lemon Anar fusion</span>
+                          </ul>
+                          <button type="button" class="btn btn-outline-secondary cart-button ">Add to cart</button>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="cardgroup col-lg-3 col-md-6 col-sm-6">
+                          <div class="card protein-tubs">
+                            <img class="card-img-top" src="./img/collagen_main_image.jpg" alt="collagen">
+                            <div class="card-body">
+                              <p class="card-text">JustHer Collagen Builder Herbs</p>
+                              <div class="stars"> 
+                                <span class="star on"></span>
+                                <span class="star on"></span>
+                                <span class="star on"></span>
+                                <span class="star on"></span>
+                                <span class="star half"></span>
+                                <span>
+                                  90 Reviews
+                                 </span>
+                               </div>
+                            <ul class="d-flex discount-price  align-items-center">
+                              <li>Rs. 629.00</li>
+                              <li>Rs. 899.00</li>
+                              <li>30% Off</li>
+                            </ul>
+                            <ul class="d-flex product-pack">
+                              <li>250g</li>
+                              <li>7 Day Pack</li>
+                            </ul>
+                            <ul class="product-color">
+                              <span>Lemon Anar fusion</span>
+                            </ul>
+                            <button type="button" class="btn btn-outline-secondary cart-button ">Add to cart</button>
+                            </div>
+                          </div>
+                          </div>
+                          <div class="text-center mb-5">
+                            <a href="#" class="btn btn-border01 disabled">NO MORE PRODUCTS</a>
+                          </div>
+                        </div>   
+                     </div>
+               
+
+
+                 
+
+
+
+
+
+
+
+<!-- footer -->
+     <footer >
+      <section >
+        <div class="container ">
+          <div class="row ">
+            <div class="col-md-7">
+        <div class="logo-footer">
+          <img src="./img/JustHer-Logo-footer.png" class="img-fluid" alt="">
+        </div>
+        <div>
+        <p class="brand-info">
+          ‘JustHer’ understands the unique nutritional needs of women and crafts exclusive products by bringing the best of science and nature together to meet your health needs. From using high-quality ingredients to practicing top quality & safety measures, we take all the necessary steps to deliver the best to you. We are here with you on your journey towards a healthier and happier life.
+        </p>
+      </div>
+      <div class="d-flex about-icons">
+        <span>
+          Want to stay updated with us
+          </span>
+          <ul class="d-flex align-items-center about-list">
+            <li><a href="#"><img src="./img/instagram.svg" class="img-fluid" alt="instagram"></a></li>
+            <li><a href="#"><img src="./img/facebook.svg" class="img-fluid" alt="facebook"></a></li>
+            <li><a href=""><img src="./img/youtube.svg" class="img-fluid" alt="youtube"></a></li>
+          </ul>
+      </div>
+    </div>
+      <div class="col-md-5">
+       <div class="newsletter-signup">
+         <h4>NEWSLETTER SIGNUP</h4>
+         <p>Subscribe to our email and be the first to know about our special offers!</p>
+         <div class="input-group">
+          <input type="text" class="form-control1" placeholder="Enter your e-mail">
+          <button type="button" class="btn btn-primary btn-sm signup">SIGN UP</button>
+        </div>
+       </div>
+       <div class="network d-flex">
+         <ul>
+           <li><a class="footer-link"href="#">Blog</a></li>
+           <li><a class="footer-link"href="#">Contact us</a> </li>
+           <li><a class="footer-link"href="#">About us</a></li>
+           <li><a class="footer-link"href="#">Terms and conditions</a> </li>
+           <li><a class="footer-link"href="#">Returns & Refund Policy</a> </li>
+           <li><a class="footer-link"href="#">Privacy Policy</a> </li>
+         </ul>
+         <ul>
+          <li>Get In Touch</li>
+          <li>+919319711266 </li>
+          <li> Monday to Sunday</li>
+          <li> 10:00 am - 7:00 pm</li>
+          <li> Terms and conditions</li>
+          <li><a class="footer-link"href="#">care@justher.in</a></li>
+        </ul>
+       </div>
+      </div>
+        <div class="payment">
+      <ul class="d-inline-flex">
+        <li><img src="./img/easy-return.svg" class="payment-method" alt="easy-return"><span>Easy Returns</span> 
+        </li>
+        <li> <img src="./img/about-us.svg" class="payment-method" alt="about-us"><span>Track your order</span> 
+        </li>
+        <li> <img src="./img/track-your-order.svg" class="payment-method" alt="track-your-order"><span>Secure payments</span> 
+        </li>
+        <li><img src="./img/authencity.svg" class="payment-method" alt="authencity"><span>Authenticity Guaranteed</span></li>
+      </ul>
+    </div>
+  </div>
+    <!-- <div class="copywright d-flex align-items-center justify-content-between"> -->
+      <div class="row">
+        <div class="col-md-6">
+      <div class="copywright">
+      <small>&copy; Copyright 2020, Justher.in</small>
+       </div>
+      </div>
+       <div class="col-md-6 gx-5">
+      <ul class="card-images d-flex mt-2 flex-wrap">
+       <div class="col-lg-2 col-md-4 p-2">
+        <li><img src="./img/visa-icon_.png" class="card-icon" alt="visa-icon_"></li>
+        </div>
+        <div class="col-lg-2 col-md-4 p-2">
+        <li><img src="./img/mastercard.png" class="card-icon" alt="mastercard"></li></li>
+      </div>
+      <div class="col-lg-2 col-md-4 p-2">
+        <li><img src="./img/american-icon.png" class="card-icon" alt="american-icon"></li>
+      </div>
+      <div class="col-lg-2 col-md-4 p-2">
+        <li><img src="./img/wallet-icon.png" class="card-icon" alt="wallet-icon"></li>
+      </div>
+      <div class="col-lg-2 col-md-4 p-2">
+        <li><img src="./img/net-banking-icon.png" class="card-icon" alt="net-banking-icon"></li>
+      </div>
+      <div class="col-lg-2 col-md-4 p-2">
+        <li><img src="./img/emi-option.png" class="card-icon" alt="emi-option"></li>
+      </div>
+      <!-- <div class="col-lg-2">
+        <li><img src="./img/cash-on-delivery-icon.png" class="card-icon" alt="cash-on-delivery-icon"></li>
+      </div> -->
+      </ul>
+    </div>
+    </div>
+   </div>
+    </section>
+  </footer>
+    <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"
+  ></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+

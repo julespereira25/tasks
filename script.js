@@ -3,48 +3,135 @@ const menu = document.querySelector(".menu");
 const sidebar = document.querySelector(".sidebar");
 const display = document.querySelector(".display-none");
 const closeSidebar = document.querySelector(".close");
-const submitButton = document.querySelector(".login-submit");
-const form = document.getElementById('form')
+const form = document.getElementById("form");
+const form1 = document.getElementById("form1");
+const featureIcon3 = document.querySelector(".feature-icon3");
+const featureIcon4 = document.querySelector(".feature-icon4");
+const featureIcon5 = document.querySelector(".feature-icon5");
+const cardGroup = document.querySelectorAll(".cardgroup");
+const disableButton = document.querySelector(".disabled");
+const navTop = document.querySelector(".fixed-top");
+const navZ = document.querySelector(".fixed-top-z");
+const navbar = document.querySelector(".navbar");
 
 menuToggle.addEventListener("click", () => {
   menu.classList.remove("display-none");
-  menuToggle.classList.add("display-none");
+  menu.classList.add("menu-active");
+  navbar.classList.add("fixed-top-z");
+  navbar.classList.remove("fixed-top");
 });
 
 closeSidebar.addEventListener("click", () => {
   menu.classList.add("display-none");
+  menuToggle.classList.remove("display-none");
 });
 
-submitButton.addEventListener("click", validationLogin);
+const currentLocation = location;
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   validationForm();
+// });
+
+// form1.addEventListener("submit", (e1) => {
+//   e1.preventDefault();
+
+//   validationLogin();
+// });
+
+function validationForm() {
+  var validateFirstname = document.querySelector(".signup-validate");
+  var validateLastname = document.querySelector(".signup-validate1");
+  var validatePhonenumber = document.querySelector(".signup-validate2");
+  var validateEmail = document.querySelector(".signup-validate3");
+  var validatePassword = document.querySelector(".signup-validate4");
+  var signupMailCheck = document.querySelector(".signupMailcheck");
+  var firstName = document.getElementById("signupfirstName").value;
+  var lastName = document.getElementById("signuplastName").value;
+  var mobileNumber = document.getElementById("signupInputNumber").value;
+  var signUpEmail = document.getElementById("signupInputEmail").value;
+  var signupPassword = document.getElementById("signupInputPassword").value;
+  var emailformat2 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  if (firstName == "") {
+    validateFirstname.innerHTML = "First Name field cannot be blank";
+  } else {
+    validateFirstname.innerHTML = "";
+  }
+
+  console.log("this is " + firstName);
+
+  if (lastName == "") {
+    validateLastname.innerHTML = "Last Name field cannot be blank";
+  } else {
+    validateLastname.innerHTML = "";
+  }
+
+  if (mobileNumber == "") {
+    validatePhonenumber.innerHTML = "Phone number field cannot be blank";
+  } else {
+    validatePhonenumber.innerHTML = "";
+  }
+
+  if (signUpEmail != "" && emailformat2.test(signUpEmail)) {
+    validateEmail.innerHTML = "";
+  } else {
+    validateEmail.innerHTML = "Please provide the valid email format";
+  }
+  console.log("this is " + signUpEmail);
+
+  if (signupPassword.length < 7) {
+    validatePassword.innerHTML = "Password length must be atleast 7 characters";
+  } else {
+    validatePassword.innerHTML = "";
+  }
+
+  if (signupPassword == "") {
+    validatePassword.innerHTML = "Password field cannot be blank";
+  }
+
+  var userInput = {
+    firstName: firstName,
+    lastName: lastName,
+    mobileNumber: mobileNumber,
+    email: signUpEmail,
+    password: signupPassword,
+  };
+
+  var existingUsersFromLocalStorage =
+    JSON.parse(localStorage.getItem("users")) || [];
+
+  var user = existingUsersFromLocalStorage.find(
+    (usr) => usr.email === userInput.email
+  );
+
+  console.log(user);
+
+  if (user) {
+    signupMailCheck.innerHTML = "This account is already registered";
+  } else {
+    signupMailCheck.innerHTML = "";
+    existingUsersFromLocalStorage.push(userInput);
+    localStorage.setItem(
+      "users",
+      JSON.stringify(existingUsersFromLocalStorage)
+    );
+  }
+}
 
 function validationLogin() {
   var loginValidate = document.querySelector(".login-validate");
-  var loginEmail = document.getElementById("exampleInputEmail1").value;
+  var loginEmail = document.getElementById("loginInputEmail").value;
+  var loginPassword = document.getElementById("loginInputPassword").value;
   var emailformat1 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  var loginPassword = document.getElementById("exampleInputPassword1").value;
-
-  // if (loginEmail == "" && loginPassword == "") {
-  //   loginValidate.innerHTML = "Email and password field is blank.";
-  // }
-
-  // if (loginPassword == "") {
-  //   loginValidate.innerHTML = "Password field is blank.";
-  // }
-
-  // if (loginEmail == "") {
-  //   loginValidate.innerHTML = "Incorrect email or password.";
-  // }
-
-  // if (loginPassword.length < 7) {
-  //   loginValidate.innerHTML = "Password length must be atleast 7 characters";
-  // }
 
   if (loginEmail != "" && emailformat1.test(loginEmail)) {
     loginValidate.innerHTML = "";
   } else {
     loginValidate.innerHTML = "Please provide the valid email format";
   }
-  console.log("this is " + loginEmailValidate);
+  console.log("this is " + loginValidate);
 
   if (loginPassword.length < 7) {
     loginValidate.innerHTML = "Password length must be atleast 7 characters";
@@ -56,136 +143,55 @@ function validationLogin() {
   }
 }
 
+// var userInput = {
+//   firstName: firstName,
+//   lastName: lastName,
+//   mobileNumber: mobileNumber,
+//   email: signUpEmail,
+//   password: signupPassword,
+// };
 
+// var existingUsersFromLocalStorage =
+//   JSON.parse(localStorage.getItem("users")) || [];
 
-function validationForm() {
+// var user = existingUsersFromLocalStorage.find(
+//   (usr) => usr.username === loginEmail && usr.password == loginPassword
+// );
 
-  var signupValidate = document.querySelector(".signup-validate");
-  var loginEmail = document.getElementById("exampleInputEmail1").value;
-  var emailformat1 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  var loginPassword = document.getElementById("exampleInputPassword1").value;
-  var firstName = document.getElementById("examplefirstName1").value;
-  var lastName = document.getElementById("examplelastName1").value;
-  var mobileNumber = document.getElementById("exampleInputNumber1").value;
-  var inputEmail = document.getElementById("exampleInputEmail1").value;
-  var inputPassword = document.getElementById("exampleInputPassword1").value;
+// if (user) {
+//   loginEmailValidate1.innerHTML = "User already exists";
+// } else {
+//   loginEmailValidate1.innerHTML = "";
+// }
 
+featureIcon3.addEventListener("click", () => {
+  cardGroup.forEach((item) => {
+    item.classList.add("col-lg-4");
+    item.classList.remove("col-lg-3");
+  });
+});
 
+featureIcon4.addEventListener("click", () => {
+  cardGroup.forEach((item) => {
+    item.classList.add("col-lg-3");
+    item.classList.remove("col-lg-4");
+  });
+});
 
-  form.addEventListener('submit', (e) => {
-    let messages = []
-    if (firstName.value === '' || firstName.value == null) {
-      messages.push('Name is required')
-    }
-  
-    if (password.value.length <= 6) {
-      messages.push('Password must be longer than 6 characters')
-    }
-  
-    if (password.value.length >= 20) {
-      messages.push('Password must be less than 20 characters')
-    }
-  
-    if (password.value === 'password') {
-      messages.push('Password cannot be password')
-    }
-  
-    if (messages.length > 0) {
-      e.preventDefault()
-      errorElement.innerText = messages.join(', ')
-    }
-  })
+featureIcon5.addEventListener("click", () => {
+  cardGroup.forEach((item) => {
+    item.classList.add("col-lg-2");
+    item.classList.remove("col-lg-4");
+    item.classList.remove("col-lg-3");
+  });
+});
 
+disableButton.disabled = true;
 
-
-
-
-
-
-
-  
-
-  if (name1 == "") {
-    nameValidate.innerHTML = "Name field is blank...please return a value";
-  } else {
-    nameValidate.innerHTML = "";
-  }
-  if (email != "" && emailformat.test(email)) {
-    emailValidate.innerHTML = "";
-  } else {
-    emailValidate.innerHTML = "Please provide the valid email format";
-  }
-  console.log("this is " + email);
-
-  if (loginPassword.length < 7) {
-  if (signupPassword.length < 7) {
-    passwordValidate.innerHTML = "Password length must be atleast 7 characters";
-  } else {
-    passwordValidate.innerHTML = "";
-  }
-  if (loginPassword == "") {
-  if (signupPassword == "") {
-    passwordValidate.innerHTML = "Input a value for password";
-  }
-
-  console.log("this is " + loginPassword);
-  console.log("this is " + signupPassword);
-
-  if (confirmPassword != loginPassword) {
-  if (confirmPassword != signupPassword) {
-    password.innerHTML = "password is not matching";
-  } else {
-    password.innerHTML = "";
-  }
-  let array = [];
-  let userInput = { name: name1, username: email, password: loginPassword };
-
-  console.log(userInput);
-  let userInput = { name: name1, username: email, password: signupPassword };
-
-  array.push(userInput.username);
-  console.log(array);
-  console.log(userInput);
-
-  if (array.includes(userInput.username)) {
-  let existingUsersFromLocalStorage =
-    JSON.parse(localStorage.getItem("users")) || [];
-  if (existingUsersFromLocalStorage.includes(userInput.username)) {
-    differentMail.innerHTML = "Sorry you have already entered this email";
-  } else {
-    differentMail.innerHTML = "";
-    existingUsersFromLocalStorage.push(userInput.username);
-    localStorage.setItem(
-      "users",
-      JSON.stringify(existingUsersFromLocalStorage)
-    );
-  }
-
-  const name = document.getElementById('name')
-const password = document.getElementById('password')
-const form = document.getElementById('form')
-const errorElement = document.getElementById('error')
-
-form.addEventListener('submit', (e) => {
-  let messages = []
-  if (name.value === '' || name.value == null) {
-    messages.push('Name is required')
-  }
-
-  if (password.value.length <= 6) {
-    messages.push('Password must be longer than 6 characters')
-  }
-
-  if (password.value.length >= 20) {
-    messages.push('Password must be less than 20 characters')
-  }
-
-  if (password.value === 'password') {
-    messages.push('Password cannot be password')
-  }
-
-  if (messages.length > 0) {
-    e.preventDefault()
-    errorElement.innerText = messages.join(', ')
-  }
-})
+let links = document.querySelectorAll(".nav-link");
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function () {
+    for (let j = 0; j < links.length; j++) links[j].classList.remove("active");
+    this.classList.add("active");
+  });
+}
