@@ -66,6 +66,26 @@ body {
   text-decoration: none;
   display: inline-block;
 }
+
+.log {
+  background-color: #65a14a;
+  border-color: #65a14a;
+  font-size: 1rem;
+  color: #f5f9f3;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 0.25rem;
+}
+
+.modalDisplay {
+  display: none;
+}
+
+.log:hover {
+  color: white;
+}
 /* 
 .nav-active {
   border-bottom: solid 2.5px #65a14a;
@@ -89,12 +109,16 @@ body {
   font-size: 0.9rem;
 }
 
-.header-button {
+.header-button,
+.logoutButton {
   background-color: #65a14a;
   border-color: #65a14a;
   font-size: 1rem;
   color: #f5f9f3;
   margin-right: 20px;
+}
+
+@media screen and {
 }
 
 .btn-primary:hover {
@@ -120,7 +144,8 @@ body {
     display: none;
   }
 
-  .header-button {
+  .header-button,
+  .logoutButton {
     display: none;
   }
 
@@ -169,11 +194,18 @@ body {
   display: block;
   transition: 0.3s;
 }
-/* 
-.side li:nth-last-child(2), li:nth-last-child(3), li:nth-last-child(4),li:nth-last-child(5),li:nth-last-child(6) {
-  padding-left: 25px;
-  padding-top: 15px;
-}  */
+
+.navLogin {
+  display: none;
+}
+
+.navLogout {
+  display: none;
+}
+
+.navSideLogout {
+  cursor: pointer;
+}
 
 .badge {
   padding-left: 9px;
@@ -536,6 +568,16 @@ small {
   text-decoration: line-through;
 }
 
+.cancel {
+  color: #65a14a;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.cancel:hover {
+  color: #161616;
+}
+
 .star {
   font-size: x-large;
   width: 20px;
@@ -878,10 +920,46 @@ iframe {
   }
 }
 
+.headerButtondisplay {
+  display: none;
+}
+
+.head-button {
+  display: none;
+}
+
+.resetDisplay {
+  display: none;
+}
+
+.loginDisplay {
+  display: none;
+}
+
+.resetValidate {
+  color: red;
+  font-size: 15px;
+}
+
+.headerWelcome {
+  margin-top: 15px;
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.headerwelcomeDisplay {
+  display: none;
+}
+
 /* BREADCRUMB */
 
 .breadcrumb-item {
   font-size: 0.8rem;
+}
+
+.login-validate {
+  color: red;
+  font-size: 15px;
 }
 
 /* VALIDATIONS */
@@ -967,6 +1045,10 @@ iframe {
   color: #65a14a;
   font-size: 14px;
   cursor: pointer;
+}
+
+.forgotPassword {
+  display: none;
 }
 
 .passwordLost:hover {
